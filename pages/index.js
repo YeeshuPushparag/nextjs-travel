@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import BookHoliday from "../components/BookHoliday";
 import ContactContainer from "../components/ContactContainer";
-import MainContainer from "../components/Maincontainer";
+import MainContainer from "../components/MainContainer";
 
 export default function Home() {
   return (
