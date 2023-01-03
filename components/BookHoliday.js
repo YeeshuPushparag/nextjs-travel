@@ -1,76 +1,71 @@
+import Script from "next/script";
 import React, { useState } from "react";
-import Datetime from "react-datetime";
-import "react-datetime/css/react-datetime.css";
 import { AiFillCalendar, AiOutlineSearch } from "react-icons/ai";
-import moment from "moment";
+
 const BookHoliday = () => {
-  var yesterday = moment().subtract(1, "day");
   const [arrivalDate, setArrivalDate] = useState(null);
   const [departureDate, setDepartureDate] = useState(null);
-  var Arrivalvalid = function (current) {
-    return current.isAfter(yesterday);
-  };
-  var Departurevalid = function (current) {
-    if (arrivalDate !== null) {
-      return current >= arrivalDate;
-    } else {
-      return current.isAfter(yesterday);
-    }
-  };
   return (
+    <>
     <div className="book-holiday">
       <h2>Book Holiday Now!</h2>
       <div className="form-container">
-        <div className="input-container">
-          <input
-            type="search"
-            name="search"
-            id="search"
-            placeholder="Search Your Destination"
-          />
-          <div className="icon" id="search-icon">
-            {" "}
+        <div className="select-container" id="select-container">
+        <div className="icon" id="search-icon">
             <AiOutlineSearch color="#bd7457" fontSize={20} />
           </div>
+        <div name="destination" id="destination" className="select-destination">Choose Your Destination</div>
+        <ul id="list" className="list-container list-display">
+          <li>London</li>
+          <li>Paris</li>
+          <li>Rome</li>
+          <li>Madrid</li>
+          <li>Switzerland</li>
+          <li>Greece</li>
+          <li>India</li>
+          <li>Dubai</li>
+          <li>Caribbean</li>
+          <li>Maldives</li>
+        </ul>
         </div>
-        <div className="input-container">
-          <Datetime
-            timeFormat={false}
-            dateFormat="DD MMM YYYY"
-            isValidDate={Arrivalvalid}
-            value={arrivalDate}
-            onChange={(e) => {
-              setArrivalDate(e);
-              if (departureDate !== null && e > departureDate) {
-                setDepartureDate(e);
-              }
-            }}
-            inputProps={{ placeholder: "Arrival", readOnly: true }}
-          />{" "}
-          <div className="icon pointer" id="a-icon">
-            {" "}
+        <div className="date-picker" id="date-picker-arrival">
+        <div className="icon" id="d-icon">
             <AiFillCalendar color="#bd7457" fontSize={20} />
           </div>
-        </div>
-        <div className="input-container">
-          <Datetime
-            timeFormat={false}
-            dateFormat="DD MMM YYYY"
-            isValidDate={Departurevalid}
-            value={departureDate}
-            onChange={(e) => {
-              setDepartureDate(e);
-            }}
-            inputProps={{ placeholder: "Departure", readOnly: true }}
-          />{" "}
-          <div className="icon pointer" id="d-icon">
-            {" "}
+		<div className="selected-date" id="selected-date-arrival">Arrival Date</div>
+
+		<div className="dates" id="arrival-dates">
+			<div className="month">
+				<div className="arrows prev-mth" id="arrival-prev-mth">&lt;</div>
+				<div className="mth" id="arrival-mth"></div>
+				<div className="arrows next-mth" id="arrival-next-mth">&gt;</div>
+			</div>
+
+			<div className="days" id="arrival-days"></div>
+		</div>
+	</div>
+        <div className="date-picker" id="date-picker-departure">
+        <div className="icon" id="d-icon">
             <AiFillCalendar color="#bd7457" fontSize={20} />
           </div>
-        </div>
-        <button id="search-btn">Search</button>
+		<div className="selected-date" id="selected-date-departure">Departure Date</div>
+
+		<div className="dates" id="departure-dates">
+			<div className="month">
+				<div className="arrows prev-mth" id="departure-prev-mth">&lt;</div>
+				<div className="mth" id="departure-mth"></div>
+				<div className="arrows next-mth" id="departure-next-mth">&gt;</div>
+			</div>
+
+			<div className="days" id="departure-days"></div>
+		</div>
+	</div>
+    
+        <button id="search-btn">Book Now</button>
       </div>
     </div>
+    <Script src="/booktravel.js"  strategy="lazyOnload"></Script>
+    </>
   );
 };
 
