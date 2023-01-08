@@ -4,7 +4,7 @@ import { AiFillCalendar, AiOutlineSearch } from "react-icons/ai";
 const BookHoliday = () => {
   return (
     <>
-    <div className="book-holiday">
+    <div className="book-holiday" id="book-now">
       <h2>Book Holiday Now!</h2>
       <div className="form-container">
         <div className="select-container" id="select-container">

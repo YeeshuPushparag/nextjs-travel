@@ -43,7 +43,9 @@ const SideBar = () => {
         </li>
       </ul>
       <div className='side-cta'>
-        <button id="side-button">Book Now</button>
+      <a href="/#book-now" className="link">
+        <button id='side-button'>Book Now</button>
+          </a>
      </div>
      
     </aside>
