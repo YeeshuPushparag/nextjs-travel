@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/legacy/image";
 const ContactContainer = () => {
   return (
-    <div className="contact">
+    <div id="contact">
  <Image
         layout="fill"
         objectFit="cover"

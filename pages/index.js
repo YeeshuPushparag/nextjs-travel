@@ -1,9 +1,25 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import MainContainer from "../components/MainContainer"
 import BookHoliday from "../components/BookHoliday"
 import ContactContainer from "../components/ContactContainer"
+import PackagesContainer from "../components/PackagesContainer";
+import ServicesContainer from "../components/ServicesContainer";
+import Gallery from "../components/Gallery";
+import Footer from "../components/Footer";
+
 export default function Home() {
+  useEffect(() => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
+  }, [])
+  
   return (
     <>
       <Head>
@@ -13,7 +29,11 @@ export default function Home() {
       </Head>
       <MainContainer />
       <BookHoliday />
+      <PackagesContainer/>
+      <ServicesContainer/>
+      <Gallery/>
       <ContactContainer />
+      <Footer/>
     </>
   );
   }

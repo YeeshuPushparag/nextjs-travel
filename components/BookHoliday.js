@@ -1,10 +1,7 @@
 import Script from "next/script";
-import React, { useState } from "react";
 import { AiFillCalendar, AiOutlineSearch } from "react-icons/ai";
 
 const BookHoliday = () => {
-  const [arrivalDate, setArrivalDate] = useState(null);
-  const [departureDate, setDepartureDate] = useState(null);
   return (
     <>
     <div className="book-holiday">

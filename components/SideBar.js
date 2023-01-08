@@ -22,24 +22,24 @@ const SideBar = () => {
           </Link>
         </li>
         <li>
-          <Link href="/#" className="link">
+          <a href="/#packages" className="link">
             Packages
-          </Link>
+          </a>
         </li>
         <li>
-          <Link href="/#" className="link">
+          <a href="/#services" className="link">
             Services
-          </Link>
+          </a>
         </li>
         <li>
-          <Link href="/#" className="link">
+          <a href="/#gallery" className="link">
             Gallery
-          </Link>
+          </a>
         </li> 
         <li>
-          <Link href="/#" className="link">
+          <a href="/#contact" className="link">
             Contact
-          </Link>
+          </a>
         </li>
       </ul>
       <div className='side-cta'>

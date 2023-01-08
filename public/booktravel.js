@@ -83,6 +83,8 @@ arrival_prev_mth_element.addEventListener("click", goToPrevMonthArrival);
 // FUNCTIONS
 function toggleDestination(e) {
     list_destination.classList.toggle("list-display");
+    departure_dates_element.classList.remove("active");
+    arrival_dates_element.classList.remove("active");
     for(destination of destination_names){
       destination.onclick = function(){
         select_destination.textContent = this.textContent;
@@ -100,6 +102,7 @@ function toggleDatePickerArrival(e) {
   if (!checkEventPathForClass(e.path, "dates")) {
     arrival_dates_element.classList.toggle("active");
     departure_dates_element.classList.remove("active");
+    list_destination.classList.add("list-display");
     arrmonth = arrselectedMonth;
     arryear = arrselectedYear;
     arrival_selected_date_element.textContent = formatDate(arrselectedDate);
@@ -203,7 +206,7 @@ function toggleDatePickerDeparture(e) {
   if (!checkEventPathForClass(e.path, "dates")) {
     departure_dates_element.classList.toggle("active");
     arrival_dates_element.classList.remove("active");
-
+    list_destination.classList.add("list-display");
     depmonth = depselectedMonth;
     depyear = depselectedYear;
     departure_selected_date_element.textContent = formatDate(depselectedDate);
