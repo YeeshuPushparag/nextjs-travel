@@ -52,7 +52,7 @@ document.getElementById("sidebar").style.transform = "translateX(0px)";
       </ul>
       <div className="cta">
       <a href="/#book-now" className="link">
-        <button id='cta-button'>Book Now</button>
+        <button className='cta-button'>Book Now</button>
           </a>
       </div>
     </nav>
