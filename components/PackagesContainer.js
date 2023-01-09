@@ -50,7 +50,7 @@ const PackagesContainer = () => {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Incidunt perspiciatis facere libero velit maxime fugiat!
               </p>
-              <div className="package-ratings">
+              <div className="ratings">
                 <AiFillStar color="#bd7457" fontSize={20} />
                 <AiFillStar color="#bd7457" fontSize={20} />
                 <AiFillStar color="#bd7457" fontSize={20} />

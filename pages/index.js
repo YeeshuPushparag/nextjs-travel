@@ -7,6 +7,8 @@ import PackagesContainer from "../components/PackagesContainer";
 import ServicesContainer from "../components/ServicesContainer";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
+import Review from "../components/Review";
+import Partners from "../components/Partners";
 
 export default function Home() {
   useEffect(() => {
@@ -32,6 +34,8 @@ export default function Home() {
       <PackagesContainer/>
       <ServicesContainer/>
       <Gallery/>
+      <Review/>
+      <Partners/>
       <ContactContainer />
       <Footer/>
     </>
