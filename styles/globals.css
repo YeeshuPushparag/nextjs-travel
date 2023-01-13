@@ -144,6 +144,7 @@ body {
   background-color: transparent;
   color: white;
   cursor: pointer;
+  outline: none;
   padding: 10px;
   border-bottom: 1px solid white;
   transition: 0.6s;
@@ -182,6 +183,7 @@ body {
   border-radius: 6px;
   transition: 0.6s;
   cursor: pointer;
+  outline: none;
 }
 #sidebar {
   position: fixed;
@@ -233,6 +235,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
   color: white;
+  outline: none;
   transition: 0.6s;
 }
 
@@ -305,6 +308,7 @@ body {
   border-radius: 6px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  outline: none;
 }
 
 .icon {
@@ -478,6 +482,7 @@ body {
   border-radius: 6px;
   transition: 0.6s;
   cursor: pointer;
+  outline: none;
 }
 #services {
   padding: 30px 10%;
@@ -653,6 +658,7 @@ body {
   background-color: #bd7457;
   color: white;
   align-self: flex-start;
+  outline:none;
   border-radius: 10px;
   margin: 10px 0px 10px 10%;
   padding: 10px 20px;
