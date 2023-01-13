@@ -93,7 +93,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-copyright">
-        <p>Copyright &copy; Created by <a href="https://yeeshupushparag.github.io/" className="link creator"  target='_blank' >Yeeshu Pushparag</a></p>
+        <p>Copyright &copy; Created by <a href="https://yeeshupushparag.github.io/" className="link creator"  target='_blank' rel="noreferrer" >Yeeshu Pushparag</a></p>
       </div>
     </footer>
   );
