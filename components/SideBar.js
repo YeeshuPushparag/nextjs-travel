@@ -17,33 +17,33 @@ const SideBar = () => {
         </div>
        <ul className="navlink sidelink">
         <li>
-          <Link href="/" className="link">
+          <Link href="/" className="link" onClick={hideSideBar}>
             Home
           </Link>
         </li>
         <li>
-          <a href="/#packages" className="link">
+          <a href="/#packages" className="link" onClick={hideSideBar}>
             Packages
           </a>
         </li>
         <li>
-          <a href="/#services" className="link">
+          <a href="/#services" className="link" onClick={hideSideBar}>
             Services
           </a>
         </li>
         <li>
-          <a href="/#gallery" className="link">
+          <a href="/#gallery" className="link" onClick={hideSideBar}>
             Gallery
           </a>
         </li> 
         <li>
-          <a href="/#contact" className="link">
+          <a href="/#contact" className="link" onClick={hideSideBar}>
             Contact
           </a>
         </li>
       </ul>
       <div className='side-cta'>
-      <a href="/#book-now" className="link">
+      <a href="/#book-now" className="link" onClick={hideSideBar}>
         <button id='side-button'>Book Now</button>
           </a>
      </div>
