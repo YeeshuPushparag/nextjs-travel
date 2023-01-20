@@ -99,7 +99,8 @@ function toggleDestination(e) {
     }
 }
 function toggleDatePickerArrival(e) {
-  if (!checkEventPathForClass(e.path, "dates")) {
+  var path = e.path || (e.composedPath && e.composedPath());
+  if (!checkEventPathForClass(path, "dates")) {
     arrival_dates_element.classList.toggle("active");
     departure_dates_element.classList.remove("active");
     list_destination.classList.add("list-display");
@@ -203,7 +204,8 @@ departure_prev_mth_element.addEventListener("click", goToPrevMonthDeparture);
 
 // FUNCTIONS
 function toggleDatePickerDeparture(e) {
-  if (!checkEventPathForClass(e.path, "dates")) {
+  var path = e.path || (e.composedPath && e.composedPath());
+  if (!checkEventPathForClass(path, "dates")) {
     departure_dates_element.classList.toggle("active");
     arrival_dates_element.classList.remove("active");
     list_destination.classList.add("list-display");
